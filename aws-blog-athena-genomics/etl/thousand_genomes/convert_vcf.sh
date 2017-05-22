@@ -1,5 +1,12 @@
 #!/bin/bash
 
+set -e
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 s3_prefix"
+    exit 1
+fi
+
 # You must specify the output path to write the parquet file in your command line
 
 S3VCF=s3://1000genomes/release/20130502/ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz

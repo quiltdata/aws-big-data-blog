@@ -1,5 +1,12 @@
 #!/bin/bash
 
+set -e
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 s3_prefix"
+    exit 1
+fi
+
 PARQUETPREFIX=$1
 
 for i in chr22 chr1 chr2 chr3 chr4 chr5 chr6 chr7 chr8 chr9 chr10 chr11 chr12 chr13 chr14 chr15 chr16 chr17 chr18 chr19 chr20 chr21
